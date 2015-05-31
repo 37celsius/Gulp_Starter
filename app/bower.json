@@ -1,0 +1,24 @@
+{
+  "name": "Boilerplate",
+  "version": "0.0.0",
+  "homepage": "https://github.com/37celsius/Gulp_Starter",
+  "description": "App Boilerplate",
+  "authors": [
+    "Beta Ngadiman"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "backbone": "~1.2.0"
+  },
+  "devDependencies": {
+    "foundation": "~5.5.2"
+  }
+}
