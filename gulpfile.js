@@ -12,6 +12,8 @@ var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var del = require('del');
+var uncss = require('gulp-uncss');
+var minifyCss = require('gulp-minify-css');
 
 // ////////////////////////////////////////////////
 // PATHS
@@ -60,6 +62,10 @@ gulp.task('styles', function(){
 		}))
 		.pipe(concat('style.css'))
 		.pipe(autoprefixer('last 2 versions'))
+		.pipe(uncss({
+			html: ['app/*.html']
+		}))
+		.pipe(minifyCss({compatibility: 'ie8'}))
 		.pipe(gulp.dest('app/css'))
 		.pipe(reload({stream:true}));
 
